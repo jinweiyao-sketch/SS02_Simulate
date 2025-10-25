@@ -1,0 +1,42 @@
+{
+  "problem_name": "DeepDive FG Selection Test",
+  "scaling_factor": 10,
+  "input_values": [],
+  "num_to_select": 1000,
+  "average_range": {
+    "min": 1950,
+    "max": 2050
+  },
+  "constraints": {
+    "zero_constraints": {
+      "min": 200,
+      "max": 500
+    },
+    "count_constraints": {
+      "global_min_count": 0,
+      "global_max_count": 10
+    },
+    "diversity_constraints": {
+      "bin_definition": {
+        "mode": "manual",
+        "dividers": [19,99,199,499,999,1499,1999,4999,9999,19999]
+      },
+      "per_bin_rules": [
+        { "default_min_selections": 1 },
+        { "value_less_than": 1000, "min_selections": 2 },
+        { "value_less_than": 500, "min_selections": 3 },
+        { "value_less_than": 100, "min_selections": 1 }
+      ]
+    }
+  },
+  "optimization_goals": [
+    {
+      "metric": "variance",
+      "target_type": "minimize"
+    },
+    {
+      "metric": "diversity",
+      "target_type": "maximize"
+    }
+  ]
+}
