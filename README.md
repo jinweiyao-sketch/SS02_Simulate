@@ -21,8 +21,7 @@ The SS02 simulator implements a 6x5 board slot machine with cascading mechanics 
 - Analyzes base game and free game scripts separately
 - Detects mismatches in payouts, stop counts, and cascading behavior
 - Computes Antebet RTP and mystery trigger probability
-- Exports volatility-based multiplier tables
-- Exports mystery trigger configuration
+- Exports volatility-based multiplier tables and mystery trigger probability
 - Exports detailed results to JSON format
 
 
